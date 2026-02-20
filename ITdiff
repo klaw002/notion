@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Support Split</title>
+  <style>
+    :root{
+      --page-bg:#ffffff;
+      --panel-bg:#e7f0ec;     /* pale green blocks */
+      --header-bg:#dfe7ef;    /* light blue/gray header strip */
+      --text:#1f2937;
+      --muted:#4b5563;
+      --border:#cfd8d3;
+      --shadow: 0 1px 0 rgba(0,0,0,.04);
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--page-bg);
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 18px auto 40px;
+      padding: 0 14px;
+    }
+
+    /* Two-column layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items:start;
+    }
+
+    @media (max-width: 880px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    /* Column header strip */
+    .colHeader{
+      background: var(--header-bg);
+      color:#111827;
+      font-weight:700;
+      text-align:center;
+      padding: 10px 10px;
+      border-radius: 3px;
+      font-size: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Image block */
+    .hero{
+      margin: 10px 0 12px;
+      display:flex;
+      justify-content:center;
+    }
+    .hero img{
+      width: 240px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid #e5e7eb;
+      background:#f3f4f6;
+    }
+
+    /* Intro paragraph */
+    .intro{
+      margin: 6px 0 12px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    /* Responsibility blocks */
+    .block{
+      background: var(--panel-bg);
+      border-radius: 4px;
+      padding: 10px 12px 10px;
+      margin: 10px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .blockTitle{
+      font-size: 11px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color:#0f172a;
+    }
+
+    .block ul{
+      margin: 0;
+      padding-left: 18px;
+      font-size: 11px;
+      color:#111827;
+      line-height: 1.35;
+    }
+    .block li{ margin: 3px 0; }
+
+    /* Optional: make the two columns align visually */
+    .col{
+      padding-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- LEFT COLUMN -->
+      <section class="col">
+        <div class="colHeader">What our IT will support</div>
+
+        <div class="hero">
+          <!-- Replace with your image -->
+          <img src="https://via.placeholder.com/240x135.png?text=Image" alt="Team working" />
+        </div>
+
+        <p class="intro">
+          Our IT team handles everything related to the workstation, local office environment, and standard tools we administer.
+        </p>
+
+        <div class="block">
+          <p class="blockTitle">1. Workstation & Peripherals</p>
+          <ul>
+            <li>Desktop/laptop setup and imaging (for devices we provide)</li>
+            <li>Monitor, keyboard, mouse, webcam, and headset setup</li>
+            <li>Basic hardware troubleshooting and replacement (for company-issued devices)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">2. Local Network & Connectivity (PH Site)</p>
+          <ul>
+            <li>Office Wi‑Fi / LAN connectivity issues within our facility</li>
+            <li>IP address allocation and local routing inside the office site</li>
+            <li>Troubleshoot local bandwidth/performance issues on our site</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">3. VPN Client & Remote Access (Local Side)</p>
+          <ul>
+            <li>Install/configure VPN client software on our workstation</li>
+            <li>Troubleshoot VPN connection from the office network</li>
+            <li>Coordinate logs/screenshots to support deeper investigation</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">4. Security & Compliance (Local Environment)</p>
+          <ul>
+            <li>Standard endpoint protections and device restrictions</li>
+            <li>Local policy enforcement (e.g., limited user privilege)</li>
+            <li>Support compliance checks related to the local environment</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">5. Local Software & Tools (Owned by Us)</p>
+          <ul>
+            <li>Troubleshoot performance issues of tools we manage</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <section class="col">
+        <div class="colHeader">What “your IT” will support</div>
+
+        <div class="hero">
+          <!-- Replace with your image -->
+          <img src="https://via.placeholder.com/240x135.png?text=Image" alt="IT support" />
+        </div>
+
+        <p class="intro">
+          Your IT team remains responsible for systems, access, and infrastructure you own and control.
+        </p>
+
+        <div class="block">
+          <p class="blockTitle">1. User Accounts & Access for Client Systems</p>
+          <ul>
+            <li>Creation, modification, and deactivation of user accounts in your systems</li>
+            <li>CRM/ERP ticketing tools and access provisioning</li>
+            <li>Role changes, permissions, and access-level approvals</li>
+            <li>Group memberships and access to shared drives/folders in your environment</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">2. Passwords & Authentication (Client Systems)</p>
+          <ul>
+            <li>Password resets for client portals and SSO (Okta/Azure AD/etc.)</li>
+            <li>MFA setup and authentication troubleshooting</li>
+            <li>SSO issues originating from your identity provider</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">3. Client-Hosted Applications & Platforms</p>
+          <ul>
+            <li>Application bugs, feature issues, or outages in your tools</li>
+            <li>Permissions and configurations inside your systems</li>
+            <li>Data corrections or database-level changes within your environment</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">4. Client Network, Servers, and Infrastructure</p>
+          <ul>
+            <li>VPN gateway availability and firewall rules on your side</li>
+            <li>Whitelisting/allowlisting IP ranges from our office</li>
+            <li>Performance issues within your internal network/servers/cloud environment</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">5. Client Email & Collaboration (Owned by You)</p>
+          <ul>
+            <li>Provisioning and managing client email accounts</li>
+            <li>Distribution lists, shared mailboxes, and calendar permissions</li>
+            <li>Access to your Teams/Slack/Zoom environment (if applicable)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <p class="blockTitle">6. Security, Compliance & Approvals (Client Environment)</p>
+          <ul>
+            <li>Security reviews and approvals for new tools or integration</li>
+            <li>Incident response and investigation for security events in your systems</li>
+            <li>Defining which client data can be accessed/exported/shared by offshore staff</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
